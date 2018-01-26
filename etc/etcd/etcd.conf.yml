@@ -1,0 +1,15 @@
+# Human-readable name for this member.
+name: 'etc-srv'
+
+# Path to the data directory.
+data-dir: '/srv'
+
+# List of comma separated URLs to listen on for peer traffic.
+listen-peer-urls: http://0.0.0.0:7001, http://0.0.0.0:2380
+
+# List of comma separated URLs to listen on for client traffic.
+listen-client-urls: http://0.0.0.0:4001,http://0.0.0.0:2379
+
+# List of this member's client URLs to advertise to the public.
+# The URLs needed to be a comma-separated list.
+advertise-client-urls: http://0.0.0.0:4001,http://0.0.0.0:2379

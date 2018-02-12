@@ -1,12 +1,8 @@
 FROM alpine:latest 
 MAINTAINER "Levent SAGIROGLU" <LSagiroglu@gmail.com>
 ARG VERSION=v3.3.0
-RUN apk update && \
-    apk upgrade && \
-    apk add --update openssl tar && \
-    apk add --update tzdata && \    
-    apk add ca-certificates && \
-	   update-ca-certificates && \
+RUN apk add --update --no-cache openssl tar tzdata ca-certificates && \
+       update-ca-certificates && \
        cp /usr/share/zoneinfo/Europe/Istanbul /etc/localtime && \
        echo "Europe/Istanbul" >  /etc/timezone && \
        wget https://github.com/coreos/etcd/releases/download/${VERSION}/etcd-${VERSION}-linux-amd64.tar.gz && \

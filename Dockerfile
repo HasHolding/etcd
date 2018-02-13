@@ -19,5 +19,4 @@ EXPOSE 2379 2380 4001 7001
 
 ENTRYPOINT ["/bin/entrypoint.sh"]
 
-
 # docker run -d -p 2379:2379  -p 2380:2380  -p 4001:4001  -p 7001:7001  -v D:\Docker\hasweb:/data   --name some-etcd   etcd  -name etcd1
